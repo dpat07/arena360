@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>360 Viewer (Self-contained)</title>
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #viewer {
+            width: 800px;
+            height: 600px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/spritespin@4.0.11/release/spritespin.min.js"></script>
+</head>
+<body>
+    <div id="viewer">Loading...</div>
+    <script>
+        SpriteSpin.create({
+            source: [],
+            width: 800,
+            height: 600,
+            sense: -1,
+            frameTime: 60,
+            animate: false,
+            responsive: true,
+            plugins: ["drag"],
+            target: "#viewer"
+        });
+    </script>
+</body>
+</html>
